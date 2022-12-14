@@ -4,16 +4,17 @@
 
 
 ## Cara Menjalankan
-
--- sesuaikan database
--- lakukan composer update
--- lakukan php artisan migrate
--- lakukan composer require laravel/ui
--- lakukan php artisan ui vue --auth
--- lakukan composer require laravelcollective/html
--- lakukan composer require intervention/image
--- lakukan composer require mews/purifier
--- lakukan npm run dev dan php artisan migrate (gunakan 2 terminal)
+- copy env dari project laravel kalian
+- sesuaikan database
+- ganti  APP_URL = http://127.0.0.1:8000 pada line ke 5 di .env
+- lakukan composer update
+- lakukan php artisan migrate
+- lakukan composer require laravel/ui
+- lakukan php artisan ui vue --auth
+- lakukan composer require laravelcollective/html
+- lakukan composer require intervention/image
+- lakukan composer require mews/purifier
+- lakukan npm run dev dan php artisan migrate (gunakan 2 terminal)
 
 
 
