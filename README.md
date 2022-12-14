@@ -2,6 +2,7 @@
 <h2>Agung Kartika Ardhiyanda (H071211064)</h2>
 <h3>Project ini masih dalam tahap pengembangan(70%) </h3>
 <br>
+
 ## About Laravel
 
 Membuat Project blogsystem berbasis laravel dan frameworknya. 
