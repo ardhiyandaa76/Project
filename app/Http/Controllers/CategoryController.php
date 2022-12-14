@@ -28,7 +28,7 @@ class CategoryController extends Controller
 
 
 
-        return view('categories.index',compact('categories'));
+        return view('categories.index', compact('categories'));
     }
 
     /**
@@ -51,23 +51,23 @@ class CategoryController extends Controller
     {
         //
 
-       //
-         $this->validate($request, [
-        'name' => 'required|max:255'
+        //
+        $this->validate($request, [
+            'name' => 'required|max:255'
         ]);
 
 
-         $category = new Category;
+        $category = new Category;
 
 
-         $category->name = $request->name;
+        $category->name = $request->name;
 
-         $category->save();
+        $category->save();
 
-         Session::flash('successaction', 'New Category has been created');
+        Session::flash('successaction', 'New Category has been created');
 
 
-         return redirect()->route('categories.index');
+        return redirect()->route('categories.index');
     }
 
     /**
@@ -112,6 +112,8 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $category = Category::find($id);
+        $category->delete();
+        return redirect()->route('categories.index');
     }
 }
