@@ -33,6 +33,14 @@
                 <tr>
                     <th>{{ $category->id }}</th>
                     <td>{{ $category->name }}</td>
+                    <!--Make a delete button-->
+                    <td>
+                        {!! Form::open(['route' => ['categories.destroy', $category->id], 'method' => 'DELETE']) !!}
+                        {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-block']) !!}
+                        {!! Form::close() !!}
+                    </td>
+                    <!--Make a edit button-->
+
 
                 </tr>
 

@@ -27,6 +27,7 @@
                     <th>No</th>
                     <th>Tags Link</th>
                     <th>Tags</th>
+                    <th>Action</th>
 
                 </tr>
             </thead>
@@ -37,6 +38,16 @@
                     <th>{{ $tag->id }}</th>
                     <th><a href="{{  route('tags.show', $tag->id)  }}">{{ $tag->name }}</a></th>
                     <td>{{ $tag->name }}</td>
+                    <!-- Make a delete button -->
+                    <td>
+                        {!! Form::open(['route' => ['tags.destroy', $tag->id], 'method' => 'DELETE']) !!}
+                        {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-block']) !!}
+                        {!! Form::close() !!}
+                    </td>
+                    <!-- Make a edit button -->
+                    <td>
+                        <a href="{{ route('tags.edit', $tag->id) }}" class="btn btn-primary btn-block">Edit</a>
+                    </td>
 
                 </tr>
 
